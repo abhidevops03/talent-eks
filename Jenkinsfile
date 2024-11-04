@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("github download"){
             steps{
-              
+		 sh 'git branch: 'main', credentialsId: 'jenkins-ssh-key', url: 'git@github.com:abhidevops03/talent-eks.git''		              
             }
         
         }
@@ -20,7 +20,7 @@ pipeline {
         }
         stage("deploy"){
             steps{
-                sh 'terraform apply --auto-approve'  
+                sh 'yes | terraform apply'  
             }
         }
         }
