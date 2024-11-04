@@ -23,10 +23,17 @@ pipeline {
                 sh 'terraform apply --auto-approve'  
             }
         }
-        stage("initialize"){
-            steps{
-                sh ''
-            }
+        }
+	post { 
+        
+        always {
+            emailext attachLog: true, body: '''Hi,
+Jenkins Job Status.
+Jenkins URL: $BUILD_URL
+Thanks
+Devops Team''', subject: 'Junkins Build Stauts: $BUILD_NUMBER', to: 'abhidevopspractice@gmail.com'
+            
+        
         }
     }
 }
