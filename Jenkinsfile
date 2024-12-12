@@ -31,7 +31,7 @@ pipeline {
 Jenkins Job Status.
 Jenkins URL: $BUILD_URL
 Thanks
-Devops Team''', subject: 'Junkins Build Stauts: $BUILD_NUMBER', to: 'abhidevopspractice@gmail.com'
+Devops Team''', subject: 'Junkins Build Stauts: $BUILD_NUMBER', to: 'abhidevops03@gmail.com'
             
         
         }
