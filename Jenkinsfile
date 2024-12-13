@@ -31,7 +31,7 @@ pipeline {
         }        }*/
 	stage("destroy"){
 	    steps{
-		sh 'terraform destroy'
+		sh 'yes| terraform destroy'
 		}
 	}}
 	post { 
