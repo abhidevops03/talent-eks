@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("github download"){
             steps{
-		 sh 'git branch: 'main', credentialsId: 'jenkins-ssh-key', url: 'git@github.com:abhidevops03/talent-eks.git''		              
+		 sh "git branch: 'main', credentialsId: 'jenkins-ssh-key', url: 'git@github.com:abhidevops03/talent-eks.git'"		              
             }
         
         }
