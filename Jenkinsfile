@@ -25,7 +25,7 @@ pipeline {
         }
         stage("deploy"){
             steps{
-                sh 'yes | terraform apply'  
+                sh 'terraform apply --auto-approve'  
             }
         }
         }
