@@ -2,12 +2,12 @@ pipeline {
     agent any
     parameters { string(name: 'BRANCH', defaultValue: 'main', description: '')}
     stages {
-        stage("github download"){
+       /* stage("github download"){
             steps{
 		 sh " git branch: 'main', credentialsId: 'jenkins-ssh-key', url: 'git@github.com:abhidevops03/talent-eks.git' "		              
             }
         
-        }
+        }*/
         stage("initialize"){
             steps{
                 sh 'yes | terraform init'  
