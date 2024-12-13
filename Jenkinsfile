@@ -8,13 +8,13 @@ pipeline {
             }
         
         }*/
-/*
+
         stage("initialize"){
             steps{
                 sh 'yes | terraform init'  
             }
         }
-	stage("validate"){
+/*	stage("validate"){
 	   steps{
 		sh 'terraform validate'
 		}
