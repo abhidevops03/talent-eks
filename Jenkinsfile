@@ -13,7 +13,7 @@ pipeline {
                 sh 'yes | terraform init'  
             }
         }
-	state("validate"){
+	stage("validate"){
 	   steps{
 		sh 'terraform validate'
 		}
