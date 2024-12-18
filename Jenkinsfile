@@ -11,10 +11,10 @@ pipeline {
 
         stage("initialize"){
             steps{
-                sh 'yes | terraform init'  
+                sh 'yes | terraform init -migrate-state'  
             }
         }
-/*	stage("validate"){
+	stage("validate"){
 	   steps{
 		sh 'terraform validate'
 		}
@@ -28,12 +28,13 @@ pipeline {
             steps{
                 sh 'terraform apply --auto-approve'  
             }
-        }        }*/
-	stage("destroy"){
+        }        }
+	/*stage("destroy"){
 	    steps{
 		sh 'yes| terraform destroy'
 		}
-	}}
+	}*/
+ }
 	post { 
         
         always {
