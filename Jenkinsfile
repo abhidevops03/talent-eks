@@ -21,7 +21,7 @@ pipeline {
 	}
         stage("setting path variable"){
             steps{
-                sh 'export KUBE_CONFIG_PATH=$HOME/.kube/config'  
+                sh 'export KUBE_CONFIG_PATH=/home/ec2-user/.kube/config'  
             }
         
 	}
