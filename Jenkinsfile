@@ -34,7 +34,7 @@ pipeline {
 		sh 'yes| terraform destroy'
 		}
 	}*/
- }
+ 
 	post { 
         
         always {
