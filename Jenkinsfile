@@ -19,16 +19,17 @@ pipeline {
 		sh 'terraform validate'
 		}
 	}
-        stage("setting path variable"){
-            steps{
-                sh 'export KUBE_CONFIG_PATH=/home/ec2-user/.kube/config'  
-            }
-        
-	}
+     
 	stage("planning"){
             steps{
                 sh 'terraform plan'
             }
+        }
+	stage("setting path variable"){
+            steps{
+                sh 'export KUBE_CONFIG_PATH=$HOME/.kube/config'
+            }
+
         }
 
         stage("deploy"){
