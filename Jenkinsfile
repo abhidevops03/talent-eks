@@ -25,18 +25,18 @@ pipeline {
                 sh 'terraform plan'
             }
         }
-/*	stage("setting path variable"){
+	stage("setting path variable"){
             steps{
                 sh 'export KUBE_CONFIG_PATH=$HOME/.kube/config'
             }
 
-        }*/
+        }
 
         stage("deploy"){
             steps{
                 sh 'terraform apply --auto-approve'  
             }
-        }        }/*
+        }      */  }
 	stage("destroy"){
 	    steps{
 		sh 'yes| terraform destroy'
