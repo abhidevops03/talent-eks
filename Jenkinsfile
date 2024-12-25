@@ -36,12 +36,13 @@ pipeline {
             steps{
                 sh 'terraform apply --auto-approve'  
             }
-        }      */  }
+        }      */  
 	stage("destroy"){
 	    steps{
 		sh 'yes| terraform destroy'
-		}
-	}
+		    }
+	    }
+    }
  
 	post { 
         
